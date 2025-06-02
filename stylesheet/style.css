@@ -1,91 +1,208 @@
 * {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Fuente Roboto para todo el documento */
+    line-height: 2; /* Altura de línea de 1.8 */
+    text-align: justify; /* Alineación del texto justificado */
 }
 
+html {
+    scroll-padding-top: 96.3px;
+    background-color: #000000;
+}
+
+
 h1 {
-   text-align:center;
-   font-weight: bold; 
+    font-family: 'Baguette Script', cursive;
+    font-style:italic;
+    font-weight: bold;
 }
 
 #photo {
-
-    /* Ancho del elemento */
-    width: 8vw;
-
-    /* Alto del elemento */
+    width: 7cm;
     height: auto;
-
-
 }
 
+
 .subtitle {
-
-    /* Color del texto en rgba */
-    color: rgb(151 156 165 / 0.89);
-
-    /* Transformación del texto a mayúsculas */
-    text-transform: uppercase;
+    color: rgb(151 156 165 / 0.89); /* Color del texto en rgba */
+    text-transform: uppercase; /* Transformación del texto a mayúsculas */
 }
 
 footer p {
+    text-align: right; /* Alineación del texto a la derecha */
+    font-style: italic; /* Estilo de fuente itálica */
+    color: #ffffff; /* Color del texto */
+    padding: 1rem; /* Espacio interno de 1rem */ 
+}
 
-    /* Alineación del texto a la derecha */
-    text-align: right;
 
-    /* Estilo de fuente itálica */
-    font-style: italic;
-
+nav {
+    position: fixed; /* Fija la barra de navegación en la parte superior de la página */
+    top: 0;
+    right: 0;
+    left: 0;
+    width: auto;
+    background-color: #000000;
+    padding: 2rem;
 }
 
 nav > ul {
-
-    /* Eliminar los estilos de lista predeterminados */
     list-style: none;
-
-    /* Activa el modelo de diseño Flexbox*/
     display: flex;
-
-    /* Distribuye los elementos con espacio igual entre ellos */
-    justify-content: space-between;
-
-    /* Organiza los elementos en una fila horizontal de izquierda a derecha */
-    flex-direction: row;
-
-    /* Centra verticalmente los elementos dentro del contenedor */
-    align-items: center;
-
-    /* Establece un espacio uniforme de 1rem entre cada elemento */
-    gap: 1rem;
+    justify-content: center;
+    align-items: center; /* Alinea los elementos de la lista al centro */
+    margin: 0; /* Elimina el margen predeterminado de la lista */
+    padding: 0; /* Elimina el padding predeterminado de la lista */
 
 }
 
-section {
 
-    /* borde de grosor 0.2 en puntos, estilo sólido y color hexadecimal #cedddd  */
-    border: 0.2pt solid #cedddd;
+nav > ul > li {
+    padding-right: 1.5cm;
+    padding-left: 1.5cm;
+}
 
-    /* margen (espacio externo) superior, derecho, abajo e izquierda */
-    margin: 4px 2px 8px 2px;
+nav > ul > li > a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-weight: 500;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 5px;
+}
 
-    /* relleno (espacio interno) de
-    1.5% en la parte superior e inferior y
-    0.8% a los lados derecho e izquierdo. */
+nav > ul > li > a:hover {
+    color: #FFFF00;
+    border-bottom: 2px solid #FFFF00; /* Cambia el color del borde inferior al pasar el mouse */
+}
 
-    padding: 1.5% 0.8%;
 
-    /* Margen inferior ajustado */
-    margin-bottom: 1.2rem;
 
-       /* borde redondeado con un radio de 5 píxeles */
-   -webkit-border-radius: 5px;
-   -moz-border-radius: 5px;
-   border-radius: 5px;
+body {
+    margin: 0; /* Margen de 0 para eliminar el espacio predeterminado del navegador */
+    margin-top: 96.3px;
+}
 
-   /* sombra a un elemento */
-   -webkit-box-shadow: 3px 3px 1px 0px rgba(235, 234, 234, 0.60);
-   -moz-box-shadow: 3px 3px 1px 0px rgba(235, 234, 234, 0.60);
-   box-shadow: 3px 3px 1px 0px rgba(235, 234, 234, 0.60);
 
+section {  /* #perfil, #experiencia, #referencias, #educacion, #habilidades, #contacto */
+    /* border: 0.2pt solid #000000; */
+    width: auto;
+    min-height: 470px;
+    padding: 7rem;
+    margin: auto; /* Centra la sección horizontalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+
+}
+
+#perfil {
+    background-color: #ccccbb; /* Color de fondo amarillo */
+    display: flex; /* Activa el modelo de diseño flexible */
+    gap: 5rem; /* Espacio entre los elementos de la sección */
+}
+
+#perfil-info {
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: flex-start; /* Alinea los elementos al inicio del contenedor */
+}
+
+#perfil-info > h2 {
+    color: #eeee48; 
+}
+
+
+#habilidades {
+    background-color: #eeee48; /* Color de fondo gris claro */
+    display: flex; /* Activa el modelo de diseño flexible */
+    flex-direction: column; /* Organiza los elementos en una columna */    
+    gap: 2rem; /* Espacio entre los elementos de la sección */
+    justify-content: center;
+    align-items: center;
+}
+
+/* ...existing code... */
+
+.tabla-habilidades {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 2rem;
+    background: #f8fafc;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    border-radius: 12px;
+    overflow: hidden;
+    table-layout: fixed; /* Asegura que las celdas tengan el mismo ancho */
+}
+
+.tabla-habilidades th,
+.tabla-habilidades td {
+    border: 1.5px solid #ccccbb;
+    padding: 1.2rem 1.5rem;
+    text-align: center;
+    font-size: 1.05rem;
+    transition: background 0.2s;
+    word-break: break-word; /* Permite que el texto se expanda hacia abajo */
+    white-space: normal;    /* Permite saltos de línea */
+    overflow-wrap: break-word;
+}
+
+.tabla-habilidades thead th {
+    background: #eeee48;
+    color: #1a1a1a;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    border-bottom: 2.5px solid #ccccbb;
+}
+
+.tabla-habilidades tbody tr:nth-child(even) {
+    background: #f3f3e6;
+}
+
+.tabla-habilidades tbody tr:hover {
+    background: #eeee48;
+}
+
+.tabla-habilidades th {
+    font-weight: 600;
+}
+
+/* Tamaños fijos para cada columna */
+.tabla-habilidades th:nth-child(1),
+.tabla-habilidades td:nth-child(1) {
+    width: 120px;
+}
+.tabla-habilidades th:nth-child(2),
+.tabla-habilidades td:nth-child(2) {
+    width: 180px;
+}
+.tabla-habilidades th:nth-child(3),
+.tabla-habilidades td:nth-child(3) {
+    width: 220px;
+}
+.tabla-habilidades th:nth-child(4),
+.tabla-habilidades td:nth-child(4),
+.tabla-habilidades th:nth-child(5),
+.tabla-habilidades td:nth-child(5),
+.tabla-habilidades th:nth-child(6),
+.tabla-habilidades td:nth-child(6) {
+    width: 120px;
+}
+/* ...existing code... */
+
+
+#educacion, #contacto {
+    background-color: #eeee48;
+}
+
+#experiencia, #referencias {
+    background-color: #ccccbb;
+}
+
+
+#educacion > h2, #contacto > h2 {
+    color: #ccccbb;
+}
+
+#experiencia > h2, #referencias > h2 {
+    color: #eeee48;
 }
 
 section > form {
@@ -103,6 +220,7 @@ section > form {
     column-gap: 1rem;
 
 }
+
 
 
 #referencias {
