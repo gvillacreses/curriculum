@@ -243,3 +243,67 @@ tr:hover {
 .contacto-lista .fa-phone { color: #0984e3; }
 .contacto-lista .fa-github { color: #ffffff; }
 .contacto-lista .fa-linkedin { color: #0077b5; }
+
+
+
+.contacto-formulario {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+#contacto form {
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    width: 70%;
+       
+}
+
+#contacto label {
+    font-weight: 500;
+    color: #f39c12;
+    margin-bottom: 0.3rem;
+    letter-spacing: 0.5px;
+}
+
+#contacto input,
+#contacto textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1.5px solid #f39c12;
+    border-radius: 8px;
+    background: #16161a;
+    color: #fff;
+    font-size: 1rem;
+    margin-top: 0.2rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    resize: none;
+}
+
+#contacto input:focus,
+#contacto textarea:focus {
+    border-color: #ffe066;
+    outline: none;
+    box-shadow: 0 0 0 2px #ffe06644;
+}
+
+#contacto button[type="submit"] {
+    background: #f39c12;
+    color: #232946;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(243,156,18,0.08);
+    width: 10rem;
+    padding: 0.5rem;
+}
+
+#contacto button[type="submit"]:hover {
+    background: #ffe066;
+    color: #232946;
+}
