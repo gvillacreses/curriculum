@@ -2,11 +2,12 @@
     font-family: 'Roboto', sans-serif; /* Fuente Roboto para todo el documento */
     line-height: 2; /* Altura de línea de 1.8 */
     text-align: justify; /* Alineación del texto justificado */
+    color: #ffffff; /* Color del texto blanco */
 }
 
 html {
     scroll-padding-top: 96.3px;
-    background-color: #000000;
+    background-color: #0f172a;
 }
 
 
@@ -23,15 +24,19 @@ h1 {
 
 
 .subtitle {
-    color: rgb(151 156 165 / 0.89); /* Color del texto en rgba */
+    color: #f39c12;
     text-transform: uppercase; /* Transformación del texto a mayúsculas */
 }
 
-footer p {
+footer {
+    padding: 2rem; /* Espacio interno de 2rem */
+}
+
+footer > p {
     text-align: right; /* Alineación del texto a la derecha */
     font-style: italic; /* Estilo de fuente itálica */
     color: #ffffff; /* Color del texto */
-    padding: 1rem; /* Espacio interno de 1rem */ 
+    margin: 0; /* Elimina el margen predeterminado */
 }
 
 
@@ -70,8 +75,8 @@ nav > ul > li > a {
 }
 
 nav > ul > li > a:hover {
-    color: #FFFF00;
-    border-bottom: 2px solid #FFFF00; /* Cambia el color del borde inferior al pasar el mouse */
+    color: #f39c12;
+    border-bottom: 2px solid #f39c12; /* Cambia el color del borde inferior al pasar el mouse */
 }
 
 
@@ -82,9 +87,8 @@ body {
 }
 
 
-section {  /* #perfil, #experiencia, #referencias, #educacion, #habilidades, #contacto */
-    /* border: 0.2pt solid #000000; */
-    width: auto;
+section {
+    width: auto; /* Ancho automático para que ocupe el espacio disponible */
     min-height: 470px;
     padding: 7rem;
     margin: auto; /* Centra la sección horizontalmente */
@@ -94,7 +98,7 @@ section {  /* #perfil, #experiencia, #referencias, #educacion, #habilidades, #co
 }
 
 #perfil {
-    background-color: #ccccbb; /* Color de fondo amarillo */
+    background-color: #0f172a; /* Color de fondo amarillo */
     display: flex; /* Activa el modelo de diseño flexible */
     gap: 5rem; /* Espacio entre los elementos de la sección */
 }
@@ -104,106 +108,68 @@ section {  /* #perfil, #experiencia, #referencias, #educacion, #habilidades, #co
     align-items: flex-start; /* Alinea los elementos al inicio del contenedor */
 }
 
-#perfil-info > h2 {
-    color: #eeee48; 
-}
 
 
 #habilidades {
-    background-color: #eeee48; /* Color de fondo gris claro */
-    display: flex; /* Activa el modelo de diseño flexible */
-    flex-direction: column; /* Organiza los elementos en una columna */    
-    gap: 2rem; /* Espacio entre los elementos de la sección */
-    justify-content: center;
-    align-items: center;
+    background-color: #2d2d2d; /* Color de fondo gris claro */
+    display: grid; /* Activa el modelo de diseño basado en cuadrícula */
+    grid-template-columns: repeat(2, 1fr); /* Define dos columnas iguales */    
+    gap: 4rem; /* Espacio entre las columnas */
+    align-items: flex-start; /* Alinea los elementos al inicio del contenedor */
 }
 
-/* ...existing code... */
-
-.tabla-habilidades {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    margin-top: 2rem;
-    background: #f8fafc;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-    border-radius: 12px;
-    overflow: hidden;
-    table-layout: fixed; /* Asegura que las celdas tengan el mismo ancho */
+.habilidades-extra {
+    margin-top: 1rem; /* Espacio superior de 2rem */
+    align-self: flex-start;
 }
 
-.tabla-habilidades th,
-.tabla-habilidades td {
-    border: 1.5px solid #ccccbb;
-    padding: 1.2rem 1.5rem;
-    text-align: center;
-    font-size: 1.05rem;
-    transition: background 0.2s;
-    word-break: break-word; /* Permite que el texto se expanda hacia abajo */
-    white-space: normal;    /* Permite saltos de línea */
-    overflow-wrap: break-word;
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #2d2d2d;
+  color: #ffffff;
+  font-size: 13px;
+  text-align: left;
+  margin-top: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-.tabla-habilidades thead th {
-    background: #eeee48;
-    color: #1a1a1a;
-    font-size: 1.1rem;
-    letter-spacing: 1px;
-    border-bottom: 2.5px solid #ccccbb;
+th, td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #444;
 }
 
-.tabla-habilidades tbody tr:nth-child(even) {
-    background: #f3f3e6;
+th {
+  background-color: #1a1a1a;
+  color: #f39c12;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13px;
 }
 
-.tabla-habilidades tbody tr:hover {
-    background: #eeee48;
+tr:hover {
+  background-color: #1f2a36;
 }
 
-.tabla-habilidades th {
-    font-weight: 600;
-}
-
-/* Tamaños fijos para cada columna */
-.tabla-habilidades th:nth-child(1),
-.tabla-habilidades td:nth-child(1) {
-    width: 120px;
-}
-.tabla-habilidades th:nth-child(2),
-.tabla-habilidades td:nth-child(2) {
-    width: 180px;
-}
-.tabla-habilidades th:nth-child(3),
-.tabla-habilidades td:nth-child(3) {
-    width: 220px;
-}
-.tabla-habilidades th:nth-child(4),
-.tabla-habilidades td:nth-child(4),
-.tabla-habilidades th:nth-child(5),
-.tabla-habilidades td:nth-child(5),
-.tabla-habilidades th:nth-child(6),
-.tabla-habilidades td:nth-child(6) {
-    width: 120px;
-}
-/* ...existing code... */
 
 
 #educacion, #contacto {
-    background-color: #eeee48;
+    background-color: #2d2d2d;
 }
 
 #experiencia, #referencias {
-    background-color: #ccccbb;
+    background-color: #0f172a;
 }
 
-
-#educacion > h2, #contacto > h2 {
-    color: #ccccbb;
+#educacion {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Define dos columnas iguales */
+    gap: 4rem; /* Espacio entre las columnas */     
 }
 
-#experiencia > h2, #referencias > h2 {
-    color: #eeee48;
-}
+#educacion > div > 
 
 section > form {
 
