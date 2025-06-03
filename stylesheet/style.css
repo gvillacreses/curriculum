@@ -114,8 +114,15 @@ section {
     background-color: #2d2d2d; /* Color de fondo gris claro */
     display: grid; /* Activa el modelo de diseño basado en cuadrícula */
     grid-template-columns: repeat(2, 1fr); /* Define dos columnas iguales */    
-    gap: 4rem; /* Espacio entre las columnas */
+    column-gap: 4rem; /* Espacio entre las columnas */
+    row-gap: 1rem;
     align-items: flex-start; /* Alinea los elementos al inicio del contenedor */
+}
+
+#habilidades > h2 {
+    grid-column: 1 / -1; /* El subtítulo ocupa las dos columnas */
+    padding: 0; 
+    margin: 0
 }
 
 .habilidades-extra {
@@ -159,9 +166,6 @@ tr:hover {
     background-color: #2d2d2d;
 }
 
-#experiencia, #referencias {
-    background-color: #0f172a;
-}
 
 #educacion {
     display: grid;
@@ -169,43 +173,73 @@ tr:hover {
     gap: 4rem; /* Espacio entre las columnas */     
 }
 
-#educacion > div > 
-
-section > form {
-
-    /* Activa el modelo de diseño basado en cuadrícula */
-    display: grid;
-
-    /* Define tres columnas iguales */
-     grid-template-columns: repeat(3, 1fr);
-
-    /* Establece un espacio vertical uniforme de 1rem entre filas */
-    row-gap: 1rem;
-
-    /* Establece un espacio horizontal uniforme de 1rem entre columnas */
-    column-gap: 1rem;
-
+.educacion-video {
+    grid-column: 1 / -1;
 }
 
+.educacion-video iframe {
+    display: block; /* Hace que el iframe sea un bloque */
+    margin-left: auto; /* Centra el iframe horizontalmente */
+    margin-right: auto; /* Centra el iframe horizontalmente */
+}
 
+#contacto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Define dos columnas iguales */
+   
+}
+
+.contacto-info {
+    align-self: start;  /* Asegura que este div esté arriba en su celda */
+}
 
 #referencias {
-
-     /* Activa el modelo Grid */
-     display: grid;
-
-     /* Define tres columnas iguales */
-     grid-template-columns: repeat(3, 1fr);
-
-     /* Espacio entre filas y columnas */
-     row-gap: 1rem;
-     column-gap: 1rem;
-
+    display: grid; /* Activa el modelo Grid */
+    grid-template-columns: repeat(3, 1fr); 
+    /* Espacio entre filas y columnas */
+    row-gap: 1rem;
+    column-gap: 1rem;
 }
 
-#referencias > h2 {
-
-     /* El subtítulo ocupa las tres columnas */
-     grid-column: 1 / -1;
-
+#referencias div {
+    grid-column: 1 / -1; /* El subtítulo ocupa las tres columnas */
 }
+
+#referencias footer {
+    text-align: right; /* Alinea el texto a la derecha */
+    font-style: italic; /* Estilo de fuente itálica */
+}
+
+
+
+
+.contacto-lista {
+    list-style: none;      /* Quita las viñetas */
+    padding: 0;
+    margin: 0;
+}
+
+.contacto-lista li {
+    margin-bottom: 1.5rem; /* Más espacio entre cada elemento */
+    display: flex;
+    align-items: center;
+}
+
+.contacto-lista i {
+    font-size: 2rem;         /* Más grande */
+    margin-right: 1rem;
+    min-width: 2.5rem;
+    text-align: center;
+    vertical-align: middle;
+    /* Colores personalizados por red */
+}
+
+.contacto-lista a {
+    text-decoration: none; /* Quita el subrayado */
+    transition: color 0.3s; /* Transición suave al cambiar el color */
+}
+
+.contacto-lista .fa-envelope { color: #e17055; }
+.contacto-lista .fa-phone { color: #0984e3; }
+.contacto-lista .fa-github { color: #ffffff; }
+.contacto-lista .fa-linkedin { color: #0077b5; }
